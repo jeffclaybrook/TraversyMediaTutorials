@@ -1,0 +1,35 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+html,
+body {
+ block-size: 100%;
+ font-size: 16px;
+}
+
+body {
+ font-family: system-ui, sans-serif;
+ -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+ list-style: none;
+}
+
+nav {
+ block-size: 100%;
+ display: block;
+ padding: .5em;
+}
+
+nav ul {
+ block-size: 100%;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ align-items: center;
+ justify-items: center;
+}

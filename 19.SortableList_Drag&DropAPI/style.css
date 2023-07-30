@@ -1,0 +1,114 @@
+:root {
+   --border: #e3e5e4;
+   --background: #c3c7ca;
+   --text: #34444f;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html, body {
+   font-size: 16px;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-size-adjust: 100%;
+}
+
+body {
+   font-family: system-ui, sans-serif;
+   background: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   height: 100vh;
+}
+
+header {
+   text-align: center;
+}
+
+header h1 {
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+header p {
+   font-size: .875rem;
+   font-weight: 300;
+}
+
+.draggable-list {
+   border: 1px solid var(--border);
+   color: var(--text);
+   padding: 0;
+   list-style: none;
+}
+
+.draggable-list li {
+   display: flex;
+   flex: 1;
+   background: #fff;
+}
+
+.draggable-list li:not(:last-of-type) {
+   border-bottom: 1px solid var(--border);
+}
+
+.draggable-list .number {
+   background: var(--background);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+   height: 40px;
+   width: 40px;
+}
+
+.draggable-list li.over .draggable {
+   background: #eaeaea;
+}
+
+.draggable-list .person-name {
+   margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .person-name {
+   color: #3ae374;
+}
+
+.draggable-list li.wrong .person-name {
+   color: #ff3838;
+}
+
+.draggable {
+   cursor: grab;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px;
+   flex: 1;
+}
+
+.check-btn {
+   background: var(--background);
+   border: none;
+   color: var(--text);
+   font-size: 16px;
+   padding: 10px 20px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+}
+
+.check-btn:active {
+   transform: scale(0.98);
+}
+
+.check-btn:focus {
+   outline: none;
+}
